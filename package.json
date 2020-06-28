@@ -1,0 +1,31 @@
+{
+  "name": "marcaje_front",
+  "version": "0.1.0",
+  "description": "Proyecto para control de marcaje de los empleados del INACIF by 201513696 - Jhosef Cáceres EPS USAC",
+  "author": "Facultad de Ingeniería de la Universidad de San Carlos de Guatemala - 201513696 - josephccaceres@gmail.com",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "test:unit": "vue-cli-service test:unit"
+  },
+  "dependencies": {
+    "vue": "^2.6.11",
+    "vue-router": "^3.2.0",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-router": "~4.4.0",
+    "@vue/cli-plugin-unit-mocha": "~4.4.0",
+    "@vue/cli-plugin-vuex": "~4.4.0",
+    "@vue/cli-service": "~4.4.0",
+    "@vue/test-utils": "^1.0.3",
+    "chai": "^4.1.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

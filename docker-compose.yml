@@ -1,0 +1,14 @@
+version: '3.3'
+
+services:
+
+  app:
+    container_name: marcaje-front
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - '.:/app'
+      - '/app/node_modules'
+    ports:
+      - '8080:8080'
