@@ -9,7 +9,7 @@ export default {
         snackColor: "teal darken-4",
         snackStatus: false,
         sanckText: " ",
-        srcLogo: "",
+        srcLogo: "../../assets/logo.png",
         /* Items */
         item: {},
         drawer: null
@@ -17,7 +17,7 @@ export default {
     created() {
 
         this.srcLogo = this.sede + "storage/images/categorias/fondo1.png";
-        this.$log.info(this.srcLogo);
+        //this.$log.info(this.srcLogo);
         this.foco();
     },
     methods: {
@@ -25,7 +25,7 @@ export default {
 
             let uri3 = this.ip + "Usuario_validation";
 
-            this.$log.info(uri3);
+            //this.$log.info(uri3);
             this.axios.post(uri3, this.item).then(response => {
                 if (response.data == 1) {
                     var href = this.ip + "bienvenido"; //find url
@@ -38,7 +38,7 @@ export default {
 
                     this.foco();
                 }
-                this.$log.info(response.data);
+                //this.$log.info(response.data);
             });
 
             //this.$log.info(this.item);
