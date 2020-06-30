@@ -3,7 +3,7 @@
     <v-layout row>
       <v-flex xs12 sm6 offset-sm3>
         <v-card>
-          <img alt="Vue logo" src="../assets/194-0.jpg" height="200px">
+          <img alt="Vue logo" src="@/assets/194-0.jpg" height="200px">
           <v-card-title primary-title>
             <div>
               <h2>Descripción de la solución del problema</h2>
