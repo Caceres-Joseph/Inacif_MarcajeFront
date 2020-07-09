@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import App from './App.vue'
-import router from '@/router/module01.js'
+import App from './module02.vue'
+import router from '@/router/module02.js'
 import store from '@/store'
 
 //Plugins
