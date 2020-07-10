@@ -14,6 +14,7 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 
+RUN echo ".."
 
 # install and cache app dependencies
 COPY package.json /app/package.json

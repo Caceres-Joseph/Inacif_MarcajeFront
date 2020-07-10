@@ -10,6 +10,7 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "bp-vuejs-dropdown": "^2.1.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuetify": "^1.0.17",

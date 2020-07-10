@@ -22,7 +22,10 @@ export default {
     },
     methods: {
         validar() {
-
+            var href = "/users"//find url
+            window.location=href;
+            
+            return
             let uri3 = this.ip + "Usuario_validation";
 
             //this.$log.info(uri3);
