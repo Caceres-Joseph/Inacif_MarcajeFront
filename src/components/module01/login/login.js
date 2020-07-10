@@ -22,7 +22,7 @@ export default {
     },
     methods: {
         validar() {
-            var href = "/users"//find url
+            var href = "/menu"//find url
             window.location=href;
             
             return
