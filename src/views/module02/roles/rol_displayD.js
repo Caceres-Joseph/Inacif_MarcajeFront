@@ -26,8 +26,9 @@ export default function getDefaultData() {
                 sortable: false,
                 align: 'center'
             }
-        ],
-        items: [],
+        ], 
+        items:[]
+        ,
         dlgEliminar:false
     }
 }

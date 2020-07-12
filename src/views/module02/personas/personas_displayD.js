@@ -12,6 +12,7 @@ export default function getDefaultData() {
         |-------------------
         */
         headers: [
+            {text: "NIP", value: "nombre"},
             {text: "Nombre", value: "nombre"},
             {text: "Telefono", value: "telefono"},
             {text: "Tipo", value: "tipo_documento"},
@@ -20,7 +21,7 @@ export default function getDefaultData() {
             {text: "Correo", value: "cerreo"},
             {text: "Rol", value: "rol"},
             {
-                text: "Acciones", sortable: false,
+                text: "", sortable: false,
                 align: 'center'
             }
         ],

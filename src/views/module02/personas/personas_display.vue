@@ -53,12 +53,12 @@
                 <td class="justify-center layout px-0">
                     <v-btn @click="clckEditar(props.item)" class="mx-0"
                            icon
-                           v-if="itemsPermisos.personas.valor.editar">
+                           >
                         <v-icon color="teal">edit</v-icon>
                     </v-btn>
                     <v-btn @click="clckEliminar(props.item)" class="mx-0"
                            icon
-                           v-if="itemsPermisos.personas.valor.eliminar">
+                           >
                         <v-icon color="pink">delete</v-icon>
                     </v-btn>
                 </td>
@@ -78,7 +78,6 @@
                 fab
                 fixed
                 right
-                v-if="itemsPermisos.personas.valor.nuevo"
         >
             <div>
                 <v-icon medium>add</v-icon>

@@ -1,4 +1,4 @@
-import eSnack from '../../modules/SnackBar/eSnack.vue';
+import eSnack from '@/components/SnackBar/eSnack.vue';
 import getDefaultData from './rol_nuevoD';
 
 export default {

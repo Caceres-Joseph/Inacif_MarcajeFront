@@ -93,14 +93,14 @@ export default {
             this.hiddenMenu();
             this.searchParent = "";
             //lendo a home
-            var href = this.ip + "bienvenido"; //find url
+            var href = "/menu"; //find url
             window.location = href;
         },
 
 
         clckUbicaciones() {
-            if (!this.permisos.roles.permiso)
-                return;
+            //if (!this.permisos.roles.permiso)
+            //    return;
 
             this.searchParent = "";
             this.$router.push({
@@ -108,17 +108,13 @@ export default {
             });
         },
         clckPaquetes() {
-            if (!this.permisos.personas.permiso)
-                return;
-
+            
             this.searchParent = "";
             this.$router.push({
                 name: "personas"
             });
         },
-        clckClientes() {
-            if (!this.permisos.usuarios.permiso)
-                return;
+        clckClientes() { 
 
             this.searchParent = "";
             this.$router.push({

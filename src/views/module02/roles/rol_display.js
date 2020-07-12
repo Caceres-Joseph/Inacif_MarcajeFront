@@ -1,21 +1,26 @@
-import eSnack from '../../modules/SnackBar/eSnack.vue';
+import eSnack from '@/components/SnackBar/eSnack.vue';
 import getDefaultData from './rol_displayD';
 
 export default {
-    props: ['ip', 'buscarGlobal', 'colorDefecto', 'itemsDisplayRols','itemsPermisos'],
+    props: ['ip', 'buscarGlobal', 'colorDefecto', 'itemsDisplayRols'],
     components: {
         eSnack,
     },
     data: getDefaultData,
     destroyed() {
-        document.removeEventListener("keyup", this.atajos);
+        //document.removeEventListener("keyup", this.atajos);
     },
     mounted() {
-        document.addEventListener("keyup", this.atajos);
+        //document.addEventListener("keyup", thitemsis.atajos);
     },
     created() {
-        this.inicializar();
-        this.enviarTab();
+
+        this.items= [
+            {idRol:1, nombre:"Administrador"}
+        ]
+
+        //this.inicializar();
+        //this.enviarTab();
     },
     methods: {
         atajos(event) {
@@ -50,9 +55,7 @@ export default {
         | Botones
         |--------------------------------------------------------------------------
         */
-        clckNuevo() {
-            if (!this.itemsPermisos.roles.valor.nuevo)
-                return;
+        clckNuevo() { 
 
             this.$router.push({
                 name: "roles_nuevo"

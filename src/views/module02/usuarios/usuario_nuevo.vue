@@ -46,7 +46,7 @@
                     </v-flex>
                     <v-flex xs12 >
                         <v-select :items="personas" @change="cbCambioNuevoUsuario" autocomplete item-text="nombre"
-                                  placeholder="Seleccione" v-model="cbPersonaModel">
+                                  placeholder="Seleccione una persona" v-model="cbPersonaModel">
                         </v-select>
                     </v-flex>
 

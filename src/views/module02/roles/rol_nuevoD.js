@@ -8,47 +8,9 @@ export default function getDefaultData() {
         item: {
             nombre: "",
             modulos: [
+
                 {
-                    nombre: 'clientes',
-                    subModulos: [
-                        {
-                            nombre: 'ubicaciones',
-                            permisos:
-                                {
-                                    nuevo: {valor: false},
-                                    editar: {valor: false},
-                                    eliminar: {valor: false},
-                                    ver: {valor: false}
-                                }
-
-                        },
-                        {
-                            nombre: 'planes',
-                            permisos:
-                                {
-                                    nuevo: {valor: false},
-                                    editar: {valor: false},
-                                    eliminar: {valor: false},
-                                    ver: {valor: false}
-
-                                }
-
-                        },
-                        {
-                            nombre: 'clientes',
-                            permisos:
-                                {
-                                    nuevo: {valor: false},
-                                    editar: {valor: false},
-                                    eliminar: {valor: false},
-                                    ver: {valor: false}
-                                }
-
-                        }
-                    ]
-                },
-                {
-                    nombre: 'personas',
+                    nombre: 'Módulo 02',
                     subModulos: [
                         {
                             nombre: 'roles',
@@ -83,7 +45,46 @@ export default function getDefaultData() {
                                 }
                         }
                     ]
-                }
+                },
+                {
+                    nombre: 'Módulo 03',
+                    subModulos: [
+                        {
+                            nombre: 'Permiso1',
+                            permisos:
+                                {
+                                    nuevo: {valor: false},
+                                    editar: {valor: false},
+                                    eliminar: {valor: false},
+                                    ver: {valor: false}
+                                }
+
+                        },
+                        {
+                            nombre: 'Permiso2',
+                            permisos:
+                                {
+                                    nuevo: {valor: false},
+                                    editar: {valor: false},
+                                    eliminar: {valor: false},
+                                    ver: {valor: false}
+
+                                }
+
+                        },
+                        {
+                            nombre: 'Permiso3',
+                            permisos:
+                                {
+                                    nuevo: {valor: false},
+                                    editar: {valor: false},
+                                    eliminar: {valor: false},
+                                    ver: {valor: false}
+                                }
+
+                        }
+                    ]
+                },
             ],
         },
 

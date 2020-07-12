@@ -5,14 +5,14 @@ export default {
     props: ['ip', 'buscarGlobal', 'colorDefecto', 'itemsDisplayPersonas', 'itemsPermisos'],
     data: getDefaultData,
     destroyed() {
-        document.removeEventListener("keyup", this.atajos);
+        //document.removeEventListener("keyup", this.atajos);
     },
     mounted() {
-        document.addEventListener("keyup", this.atajos);
+        //document.addEventListener("keyup", this.atajos);
     },
     created() {
-        this.inicializar();
-        this.enviarTab();
+        //this.inicializar();
+        //this.enviarTab();
     },
     methods: {
         atajos(event) {
@@ -46,9 +46,7 @@ export default {
         |--------------------------------------------------------------------------
         */
         clckNuevo() {
-            if(!this.itemsPermisos.personas.valor.nuevo)
-                return;
-
+            
             this.$router.push({
                 name: "personas_nuevo"
             });
