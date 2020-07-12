@@ -58,22 +58,19 @@
                 <v-tab
                         :key="0"
                         :ripple="false"
-                        @click="clckUbicaciones"
-                        v-if="permisos.roles.permiso">
+                        @click="clckUbicaciones">
                     Roles
                 </v-tab>
                 <v-tab
                         :key="1"
                         :ripple="false"
-                        @click="clckPaquetes"
-                        v-if="permisos.personas.permiso">
+                        @click="clckPaquetes">
                     Personas
                 </v-tab>
                 <v-tab
                         :key="2"
                         :ripple="false"
-                        @click="clckClientes"
-                        v-if="permisos.usuarios.permiso">
+                        @click="clckClientes">
                     Usuarios
                 </v-tab>
             </v-tabs>
@@ -255,7 +252,6 @@
                     :itemsDisplayPersonas="itemsPersonas"
                     :itemsDisplayRols="itemsRols"
                     :itemsDisplayUsuarios="itemsUsuarios"
-                    :itemsPermisos="permisos"
                     @accDisplayPersonas="setDisplayPersonas"
                     @accDisplayRols="setDisplayRols"
                     @accDisplayUsuarios="setDisplayUsuarios"
@@ -314,7 +310,7 @@
                         py-3
                         text-xs-center
                         xs12>
-                    <strong> &copy;{{ new Date().getFullYear() }}</strong> — josephccaceres@gmail.com
+                    <strong> &copy;{{ new Date().getFullYear() }} INACIF</strong> — josephccaceres@gmail.com
                 </v-flex>
             </v-layout>
         </v-footer>
