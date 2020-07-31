@@ -1,8 +1,5 @@
 import Dropdown from "bp-vuejs-dropdown";
 import eSnack from "../SnackBar/eSnack.vue";
-import html2canvas from "html2canvas";
-
-import getSede from './../sede.js';
 
 export default {
 
@@ -14,7 +11,8 @@ export default {
     props: {
         colorBarra: String,
         subModulos: Array,
-        atajos1: Array
+        atajos1: Array,
+        chip: Object
     },
     components: {
         Dropdown,
@@ -28,11 +26,6 @@ export default {
     */
 
     data: () => ({
-        chip: {
-            nombre: getSede(),
-            icono: "location_on"
-        },
-
         tabs: -1,
         searchParent: "",
         dlgAtajos: false,
@@ -76,7 +69,6 @@ export default {
         inicializar() {
             this.getUser();
             this.listener();
-
         },
 
         reset() {
@@ -102,10 +94,8 @@ export default {
         |--------------------------------------------------------------------------
         */
         getUser() {
-            let uri = getSede() + "/Usuario_actual";
-            this.axios.get(uri).then(response => {
-                this.inicial = response.data.usuario.charAt(0).toUpperCase();
-            });
+
+            this.inicial = "U"
         },
         bug() {
             this.hiddenMenu();
@@ -127,23 +117,16 @@ export default {
 
         },
         salir() {
-            //haciendo logout
-            let uri = getSede() + "/session_remove/";
 
-            this.axios
-                .get(uri)
-                .catch(error => {
-                    this.$log.info("Error al cerrar session");
-                });
-
-            var href = getSede() + "/login" //find url
+            var href = "/"//find url
             window.location = href;
+
         },
         inicio() {
             this.hiddenMenu();
             this.searchParent = "";
             //lendo a home
-            var href = getSede()+"/bienvenido"; //find url
+            var href = "/menu"; //find url
             window.location = href;
         },
 
@@ -155,7 +138,7 @@ export default {
         */
 
         reportarBug() {
-            let uri =getSede()+ "/Bug_insert";
+            let uri = "/Bug_insert";
 
             this.axios
                 .post(uri, this.itemBug)
@@ -171,13 +154,7 @@ export default {
                 });
         },
         takeScreen() {
-            //var str = html2canvas(document.body);
-            html2canvas(document.body).then(canvas => {
-                //document.body.appendChild(canvas);
 
-                var data = canvas.toDataURL();
-                this.itemBug.image = data;
-            });
         },
         hiddenMenu() {
             this.$refs.dropdown.isHidden = true;

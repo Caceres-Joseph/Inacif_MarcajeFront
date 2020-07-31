@@ -41,3 +41,24 @@ docker run -v ${PWD}:/app -v /app/node_modules -p 8081:8080 --rm marcaje-front:d
 docker run -it -v ${PWD}:/app -v /app/node_modules -p 8081:8080 --rm marcaje-front:dev
 
 ```
+
+
+# File vue.config.js
+
+vue.config.js is an optional config file that will be automatically loaded by @vue/cli-service
+
+Used to create different views in vue.js
+
+
+
+# Create a new module
+
+## 1. Modify vue.config.js
+
+In the file vue.config.js you will add new directories where are located the page for the new module
+
+## 2. Create a router file
+
+Create new file for the router and add new paths 
+
+## 3. 

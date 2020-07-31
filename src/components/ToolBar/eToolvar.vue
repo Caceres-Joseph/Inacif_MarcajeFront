@@ -12,7 +12,7 @@
             <v-toolbar-title
                     class="ml-0 pl-3 hidden-sm-and-down"
                     style="width: 300px">
-                <span>CHIMAL&nbsp;<span class="text"> TV</span></span>
+                <span>&nbsp;<span class="text">INACIF</span></span>
             </v-toolbar-title>
             <v-text-field
                     append-icon="search"
