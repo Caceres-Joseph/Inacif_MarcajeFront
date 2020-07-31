@@ -3,24 +3,19 @@ import VueRouter from 'vue-router'
 
 //views
 
-//import master from '@/views/module02/peoples_master.vue'
-import home from '@/views/module02/peoples_home.vue'
+import home from '@/views/M02_users/peoples_home.vue'
 
 
-import roles from '@/views/module02/roles/rol_display.vue'
-//import roles_editar from './peoples/roles/rol_editar.vue'
-import roles_nuevo from '@/views/module02/roles/rol_nuevo.vue'
+import roles from '@/views/M02_users/roles/rol_display.vue'
+import roles_nuevo from '@/views/M02_users/roles/rol_nuevo.vue'
 
 
-import personas from '@/views/module02/personas/personas_display.vue'
-//import personas from './peoples/personas/personas_display.vue'
-//import personas_editar from './peoples/personas/personas_editar.vue'
-import personas_nuevo from '@/views/module02/personas/personas_nuevo.vue'
+import personas from '@/views/M02_users/personas/personas_display.vue'
+import personas_nuevo from '@/views/M02_users/personas/personas_nuevo.vue'
 
 
-import usuarios from '@/views/module02/usuarios/usuario_display.vue'
-//import usuarios_editar from '@/views/module02/usuarios/usuario_editar.vue'
-import usuarios_nuevo from '@/views/module02/usuarios/usuario_nuevo.vue'
+import usuarios from '@/views/M02_users/usuarios/usuario_display.vue'
+import usuarios_nuevo from '@/views/M02_users/usuarios/usuario_nuevo.vue'
 
 
 

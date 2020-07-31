@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from '@/router/module01.js'
+import router from '@/router/M03_hours.js'
 import store from '@/store'
 
 //Plugins
