@@ -22,5 +22,10 @@ module.exports = {
             template: 'public/index.html',
             title: 'Hours'
         },
+        'devices': {
+            entry: './src/pages/M05_devices/main.js',
+            template: 'public/index.html',
+            title: 'Devices'
+        },
     }
 }

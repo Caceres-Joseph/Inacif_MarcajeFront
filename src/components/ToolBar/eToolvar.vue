@@ -15,7 +15,6 @@
                 <span>&nbsp;<span class="text">INACIF</span></span>
             </v-toolbar-title>
             <v-text-field
-                    append-icon="search"
                     class="mx-3"
                     flat
                     label="Buscar"

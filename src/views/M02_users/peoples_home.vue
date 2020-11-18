@@ -231,8 +231,8 @@
                 <v-chip
                         color="blue-grey darken-2"
                         text-color="white">
-                    Control de marcaje
-                    <v-icon right>location_on</v-icon>
+                    Administración de usuarios
+                    <v-icon right>supervisor_account</v-icon>
                 </v-chip>
                 <!--
 
