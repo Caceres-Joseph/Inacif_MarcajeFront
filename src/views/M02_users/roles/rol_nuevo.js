@@ -43,12 +43,8 @@ export default {
         clckAceptar() {
 
 
-            let uri = this.ip + "Permiso_insert";
-            if (this.nombre == "") {
-                this.focoInicio();
-                this.$emit("mensajeAdvertencia", "Tiene que colocarle nombre al rol.");
-                return;
-            }
+            let uri = this.ip + "rols/";
+            
 
             this.axios
                 .post(uri, this.item)

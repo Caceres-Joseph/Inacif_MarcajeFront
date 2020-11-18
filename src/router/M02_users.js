@@ -17,8 +17,8 @@ import personas_nuevo from '@/views/M02_users/personas/personas_nuevo.vue'
 import usuarios from '@/views/M02_users/usuarios/usuario_display.vue'
 import usuarios_nuevo from '@/views/M02_users/usuarios/usuario_nuevo.vue'
 
-
-
+// ip 
+import getIp from '@/components/globales.js';
 
 Vue.use(VueRouter)
 
@@ -31,6 +31,7 @@ const routes = [{
         children: [{
                 name: 'roles',
                 path: 'roles',
+                props: {ip: getIp()},
                 component: roles
             },
             /*
@@ -43,6 +44,7 @@ const routes = [{
             {
                 name: 'roles_nuevo',
                 path: 'roles_nuevo',
+                props: {ip: getIp()},
                 component: roles_nuevo
             },
             {

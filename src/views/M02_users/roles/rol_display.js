@@ -15,11 +15,7 @@ export default {
     },
     created() {
 
-        this.items= [
-            {idRol:1, nombre:"Administrador"}
-        ]
-
-        //this.inicializar();
+        this.inicializar();
         //this.enviarTab();
     },
     methods: {
@@ -36,15 +32,15 @@ export default {
         */
         inicializar() {
 
-            let uri = this.ip + "Rol_items";
+            let uri = this.ip + "rols/";
             this.items = this.itemsDisplayRols;
-
+            console.log(uri);
 
             this.axios.get(uri).then(response => {
 
                 if (this.itemsDisplayRols == 0 || JSON.stringify(response.data) != JSON.stringify(this.items)) {
                     this.items = response.data;
-                    this.$emit("accDisplayRols", this.items);
+                    //this.$emit("accDisplayRols", this.items);
                 }
             });
 
