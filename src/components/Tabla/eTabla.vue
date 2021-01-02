@@ -53,7 +53,6 @@
       fab
       fixed
       right
-      :block="false"
       :loading="loading2"
     >
     <div>

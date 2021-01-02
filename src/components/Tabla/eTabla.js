@@ -56,7 +56,7 @@ export default {
           const l = this.loader
           this[l] = !this[l]
   
-          setTimeout(() => (this[l] = false), 4000)
+          setTimeout(() => (this[l] = false), 5000)
   
           this.loader = null
         }
