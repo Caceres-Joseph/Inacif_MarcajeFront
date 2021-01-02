@@ -45,10 +45,25 @@
     </v-data-table>
 
     <!-- Boton flotante -->
-    <v-btn @click="clckNuevo" bottom color="orange darken-4" dark fab fixed right>
-      <div>
-        <v-icon>{{iconFloatButton}}</v-icon>
+    <v-btn
+      @click="loader = 'loading2'; clckNuevo(loading2)" 
+      bottom
+      color="orange darken-4"
+      dark
+      fab
+      fixed
+      right
+      :block="false"
+      :loading="loading2"
+    >
+    <div>
+       <v-icon light>{{iconFloatButton}}</v-icon>
       </div>
+      <template v-slot:loader>
+        <span class="custom-loader">
+          <v-icon dark>cached</v-icon>
+        </span>
+      </template>
     </v-btn>
   </v-container>
 </template>
@@ -56,3 +71,42 @@
 <script src="./eTabla.js">
 </script>
 
+
+<style>
+.custom-loader {
+  animation: loader 1s infinite;
+  display: flex;
+}
+@-moz-keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>

@@ -108,36 +108,24 @@
             */
 
             clckEditar(item) {
-
-                this.$router.push({
-                    name: "roles_editar",
-                    params: {
-                        id: item.idRol
-                    }
-                });
             },
 
             clckEliminar(itemEliminar) {
+            },
 
-                let uri = this.ip + "rols/" + itemEliminar.idRol  + "/";
-                
+            clckNuevo() {
+                let uri = this.ip + "apiInacif_ubicaciones";
                 this.axios
-                    .delete(uri)
+                    .get(uri)
                     .then(response => {
-                        this.mensajeInfo("Eliminado exitosamente");
-                        var index = this.fItems.indexOf(itemEliminar);
-                        if (index > -1) {
-                            this.fItems.splice(index, 1);
-                        }
+                        this.inicializar();
+                        this.mensajeInfo("Se actualizó la tabla de ubicaciones correctamente");
                     })
                     .catch(error => {
+                        console.log(error);
                         this.mensajeError("Ocurrió un error");
                     });
-            },
-            clckNuevo() {
-                this.$router.push({name: "roles_nuevo"});
             }
-
         }
     }
 </script>

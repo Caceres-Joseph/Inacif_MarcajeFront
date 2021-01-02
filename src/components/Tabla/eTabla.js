@@ -41,8 +41,26 @@ export default {
         dlgEliminar: false,
         search: "",
 
-    }),
+        /*
+        |------------------
+        | Loader
+        |-------------------
+        */
+        loader: null,
+        loading: false,
+        loading2: false,
 
+    }),
+    watch: {
+        loader () {
+          const l = this.loader
+          this[l] = !this[l]
+  
+          setTimeout(() => (this[l] = false), 4000)
+  
+          this.loader = null
+        }
+    },
     /*
     |--------------------------------------------------------------------------
     | Funciones

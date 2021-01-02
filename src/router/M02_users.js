@@ -12,10 +12,8 @@ import roles from '@/views/M02_users/roles/listar.vue'
 import roles_nuevo from '@/views/M02_users/roles/nuevo.vue'
 import roles_editar from '@/views/M02_users/roles/editar.vue'
 
-// Lugar
+// Ubicacion
 import lugares from '@/views/M02_users/lugares/listar.vue'
-import lugares_nuevo from '@/views/M02_users/lugares/nuevo.vue'
-import lugares_editar from '@/views/M02_users/lugares/editar.vue'
 
 Vue.use(VueRouter)
 
@@ -46,19 +44,7 @@ const routes = [{
                 path: 'lugares',
                 props: {ip: getIp()},
                 component: lugares
-            },
-            {
-                name: 'lugares_editar',
-                path: 'lugares_editar:id',
-                props: {ip: getIp()},
-                component: lugares_editar
-            },
-            {
-                name: 'lugares_nuevo',
-                path: 'lugares_nuevo',
-                props: {ip: getIp()},
-                component: lugares_nuevo
-            },
+            }
         ]
 }];
 
