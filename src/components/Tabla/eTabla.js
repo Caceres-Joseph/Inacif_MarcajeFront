@@ -12,7 +12,11 @@ export default {
         clckEditar: Function,
         clckEliminar: Function,
         clckNuevo: Function,
-        buscar:String
+        buscar: String, 
+        iconFloatButton: {
+            type: String,
+            default: 'add'
+          }
     },
 
     /*
@@ -35,7 +39,7 @@ export default {
         */
 
         dlgEliminar: false,
-        search: ""
+        search: "",
 
     }),
 
@@ -63,6 +67,7 @@ export default {
         |-------------------------
         */
         inicializar() {
+            
         },
 
         reset() {
@@ -85,8 +90,8 @@ export default {
             this.dlgEliminar = true;
             this.itemEliminar = item;
         },
-        btnEliminar(){
-            this.dlgEliminar=false;
+        btnEliminar() {
+            this.dlgEliminar = false;
             this.clckEliminar(this.itemEliminar);
         },
 
@@ -100,8 +105,20 @@ export default {
             if (!item.check) {
                 this.itemRetorno[nombre] = null;
             }
+        },
+
+        /*
+        |-------------------------
+        | Funciones
+        |-------------------------
+        */
+        getIfAcciones() {
+            var result = this.encabezado.filter(item=>item.text === "Acciones").length;
+            return result != 0;
+        },
+
+        getAlingItem(index){
+            return "text-xs-"+this.encabezado[index].align
         }
-
-
     }
 }

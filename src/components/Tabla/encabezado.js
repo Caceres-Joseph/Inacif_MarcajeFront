@@ -28,7 +28,7 @@ export class encabezado{
         var json = {
             'text': texto,
             'value': valor,
-            align: 'center'
+            align: 'left'
         };
         this.jsonHeader.push(json);
     }
@@ -38,7 +38,7 @@ export class encabezado{
         var json = {
             'text': texto,
             'value': valor,
-            align: 'center'
+            align: 'right'
         };
         this.jsonHeader.push(json);
     }

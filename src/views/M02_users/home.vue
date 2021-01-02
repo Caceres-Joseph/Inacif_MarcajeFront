@@ -65,6 +65,7 @@
                 var submodulos = new submodulo(this.$router);
 
                 submodulos.tituloSimple("Roles","/roles", "KeyO", "CTRL + ALT + R")
+                submodulos.tituloSimple("Ubicaciones","/lugares", "KeyO", "CTRL + ALT + L")
 
                 this.fAtajos=submodulos.getAtajos();
                 this.fSubmodulos=submodulos.getJson();

@@ -1,92 +1,56 @@
 <template>
-    <v-container fluid>
+  <v-container fluid>
+    <!-- Dialogo  -->
+    <v-dialog max-width="500px" v-model="dlgEliminar">
+      <v-card>
+        <v-card-title>
+          <span class="headline">Confirmar eliminado</span>
+        </v-card-title>
+        <v-card-actions>
+          <v-spacer></v-spacer>
 
-        <!-- Dialogo  -->
-        <v-dialog
-                max-width="500px"
-                v-model="dlgEliminar">
+          <v-btn @click.native="btnEliminar" color="red darken-3" dark depressed large>Eliminar</v-btn>
+          <v-btn
+            @click.native="dlgEliminar = false"
+            color="blue-grey lighten-4"
+            depressed
+            large
+          >Cancelar</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
 
-            <v-card>
-                <v-card-title>
-                    <span class="headline">Confirmar eliminado</span>
-                </v-card-title>
-                <v-card-actions>
-                    <v-spacer></v-spacer>
+    <!-- Tabla  -->
+    <v-data-table
+      :disable-initial-sort="true"
+      :headers="encabezado"
+      :items="items"
+      :search="buscar"
+      class="elevation-1"
+      item-key="nombre"
+    >
+      <template slot="items" slot-scope="props">
+        <td v-for="(it, key, index) in props.item" :class="getAlingItem(index)">{{it }}</td>
 
-                    <v-btn
-                            @click.native="btnEliminar"
-                            color="red darken-3"
-                            dark
-                            depressed
-                            large>Eliminar
-                    </v-btn>
-                    <v-btn
-                            @click.native="dlgEliminar = false"
-                            color="blue-grey lighten-4"
-                            depressed
-                            large>Cancelar
-                    </v-btn>
-                </v-card-actions>
-            </v-card>
+        <td class="justify-center layout px-0" v-if="getIfAcciones()">
+          <v-btn @click="clckEditar(props.item)" class="mx-0" icon>
+            <v-icon color="teal">edit</v-icon>
+          </v-btn>
+          <v-btn @click="clckEliminarTemp(props.item)" class="mx-0" icon>
+            <v-icon color="pink">delete</v-icon>
+          </v-btn>
+        </td>
+      </template>
+      <template slot="no-data">No hay datos</template>
+    </v-data-table>
 
-        </v-dialog>
-
-
-
-
-        <!-- Tabla  -->
-        <v-data-table
-                :disable-initial-sort="true"
-                :headers="encabezado"
-                :items="items"
-                :search="buscar"
-                class="elevation-1"
-                item-key="nombre"
-        >
-            <template slot="items" slot-scope="props">
-
-
-                <td v-for="(it, key, index) in props.item"
-                        class="text-xs-center"
-                >{{it }}</td>
-
-
-
-                <td class="justify-center layout px-0">
-                    <v-btn @click="clckEditar(props.item)" class="mx-0"
-                           icon
-                    >
-                        <v-icon color="teal">edit</v-icon>
-                    </v-btn>
-                    <v-btn @click="clckEliminarTemp(props.item)" class="mx-0"
-                           icon
-                    >
-                        <v-icon color="pink">delete</v-icon>
-                    </v-btn>
-                </td>
-
-            </template>
-            <template slot="no-data">
-                No hay datos
-            </template>
-        </v-data-table>
-
-        <!-- Boton flotante -->
-        <v-btn
-                @click="clckNuevo"
-                bottom
-                color="orange darken-4"
-                dark
-                fab
-                fixed
-                right
-        >
-            <div>
-                <v-icon>add</v-icon>
-            </div>
-        </v-btn>
-
-    </v-container>
+    <!-- Boton flotante -->
+    <v-btn @click="clckNuevo" bottom color="orange darken-4" dark fab fixed right>
+      <div>
+        <v-icon>{{iconFloatButton}}</v-icon>
+      </div>
+    </v-btn>
+  </v-container>
 </template>
 
 <script src="./eTabla.js">
