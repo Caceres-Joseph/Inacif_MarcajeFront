@@ -3,7 +3,7 @@
   "version": "0.1.6",
   "description": "Proyecto para control de marcaje de los empleados del INACIF by 201513696 - Jhosef Cáceres EPS USAC",
   "author": "Facultad de Ingeniería de la Universidad de San Carlos de Guatemala - 201513696 - josephccaceres@gmail.com",
-  "private": true,
+  "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
